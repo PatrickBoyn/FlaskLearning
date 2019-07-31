@@ -50,7 +50,7 @@ def create_item(name):
 
 
 @app.route('/store/<string:name>/item')
-def get_item(name):
+def get_items(name):
     for store in store:
         if store['name'] == name:
             return jsonify({'items': store['items']})
