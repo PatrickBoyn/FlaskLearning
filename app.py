@@ -23,12 +23,12 @@ def create_store():
 
 @app.route('/store/<string:name>')
 def get_store(name):
-    return jsonify({'stores': stores})
+    pass
 
 
 @app.route('/store')
 def get_stores():
-    pass
+    return jsonify({'stores': stores})
 
 
 @app.route('/store/<string:name>/item', methods=['POST'])
