@@ -21,7 +21,6 @@ def home():
     return render_template('index.html')
 
 
-# TODO keep track of what method you're putting things in.
 @app.route('/store', methods=['POST'])
 def create_store():
     request_data = request.get_json()
