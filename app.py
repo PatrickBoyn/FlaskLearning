@@ -32,7 +32,11 @@ def create_store():
 
 @app.route('/store/<string:name>')
 def get_store(name):
-    pass
+    for store in store:
+        if store['name'] == name:
+            return jsonify(store)
+        else:
+            return jsonify({'Error': 'No store by that name.'})
 
 
 @app.route('/store')
