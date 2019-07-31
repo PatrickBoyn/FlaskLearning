@@ -11,6 +11,7 @@
         xmlHttp.send(null);
       }
       // TODO find out if local host shorthand will work here.
+      // This is the only code I wrote this call here.
       httpGetAsync('http://127.0.0.1:5000/store', response => {
         alert(response);
       });
