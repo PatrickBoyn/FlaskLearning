@@ -2,6 +2,19 @@ from flask import Flask
 
 app = Flask(__name__)
 
+# A faux database.
+stores = [
+    {
+        'name': 'Food store',
+        'items': [
+            {
+                'name': 'apple',
+                'price': 1.99
+            }
+        ]
+    }
+]
+
 
 @app.route('/store', methods=['POST'])
 def create_store():
